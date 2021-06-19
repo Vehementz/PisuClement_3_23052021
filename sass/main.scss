@@ -79,6 +79,7 @@
     font-weight: 600;
     background: map-get($colors, background-btn);
     border: none;
+    cursor: pointer;
   }
 
 }
@@ -92,6 +93,45 @@
     font-weight: map-get($font-weight, title);
     padding: map-get($padding, title);
 
+  }
+
+  &_element {
+    font-size: map-get($font-size, element);
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: map-get($colors, grey-background);
+    border-radius: 20px;
+    margin: 1.5rem;
+    font-weight: 600;
+    
+    &:nth-child(4) {
+      background: rgb(245, 235, 237);
+    }
+    
+
+    .fas {
+      position: absolute;
+      left: 14%;
+      opacity: 0.5;
+    }
+
+    .purple {
+      color: purple;
+    }
+
+    &_number {
+      position: absolute;
+      border-radius: 50%;
+      background: map-get($colors, primary);
+      color: white;
+      left: 4%;
+      height: 2rem;
+      width: 2rem;
+      text-align: center;
+    }
   }
 }
 

@@ -106,6 +106,7 @@ header .header_logo {
   background: -webkit-gradient(linear, left top, left bottom, from(#e85ab4), to(#bd24f0));
   background: linear-gradient(#e85ab4, #bd24f0);
   border: none;
+  cursor: pointer;
 }
 
 .operation-section {
@@ -116,5 +117,52 @@ header .header_logo {
   font-size: 1.8rem;
   font-weight: bold;
   padding: 0 0 1rem 1rem;
+}
+
+.operation-section_element {
+  font-size: 1.7rem;
+  height: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f2f2f2;
+  border-radius: 20px;
+  margin: 1.5rem;
+  font-weight: 600;
+}
+
+.operation-section_element:nth-child(4) {
+  background: #f5ebed;
+}
+
+.operation-section_element .fas {
+  position: absolute;
+  left: 14%;
+  opacity: 0.5;
+}
+
+.operation-section_element .purple {
+  color: purple;
+}
+
+.operation-section_element_number {
+  position: absolute;
+  border-radius: 50%;
+  background: #9356DC;
+  color: white;
+  left: 4%;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
