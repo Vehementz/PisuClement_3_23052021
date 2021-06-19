@@ -54,8 +54,8 @@
 
   &_title {
     text-align: center;
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: map-get($font-size, title);
+    font-weight: map-get($font-weight, title);
     margin: 0 5rem 2rem 5rem;
     line-height: 2.5rem;
   }
@@ -80,5 +80,20 @@
     background: map-get($colors, background-btn);
     border: none;
   }
-  
+
 }
+
+
+.operation-section {
+  padding: map-get($padding, section);
+
+  &_title {
+    font-size: map-get($font-size, title);
+    font-weight: map-get($font-weight, title);
+    padding: map-get($padding, title);
+
+  }
+}
+
+
+

@@ -107,4 +107,14 @@ header .header_logo {
   background: linear-gradient(#e85ab4, #bd24f0);
   border: none;
 }
+
+.operation-section {
+  padding: 4rem 0.7rem;
+}
+
+.operation-section_title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 0 0 1rem 1rem;
+}
 /*# sourceMappingURL=main.css.map */
