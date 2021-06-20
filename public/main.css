@@ -242,8 +242,11 @@ footer .fas, footer .far {
 }
 
 .restaurant-section_article_img {
+  height: 15rem;
   border-radius: 20px 20px 0 0;
   margin-bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .restaurant-section_article_description {
@@ -254,9 +257,29 @@ footer .fas, footer .far {
 
 .restaurant-section_article_description > p {
   font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .restaurant-section_article_description :first-child {
   font-weight: bold;
+}
+
+.restaurant-section_article_description :nth-child(2) {
+  opacity: 0.5;
+}
+
+.restaurant-section_article_description .fa-heart {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  right: 1rem;
+  font-size: 2.5rem;
+  opacity: 0.5;
+  bottom: 2rem;
+  margin: -1.2rem 0;
 }
 /*# sourceMappingURL=main.css.map */
