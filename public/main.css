@@ -174,8 +174,8 @@ footer .fas, footer .far {
   border-radius: 20px;
   margin: 1.5rem;
   font-weight: 600;
-  -webkit-box-shadow: 2px 2px 6px #aaa, -2px 2px 6px #aaa;
-          box-shadow: 2px 2px 6px #aaa, -2px 2px 6px #aaa;
+  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125), -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+          box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125), -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
 }
 
 .operation-section_element:nth-child(4) {
@@ -236,8 +236,8 @@ footer .fas, footer .far {
   width: 95%;
   height: 30%;
   margin: 0 auto 2rem auto;
-  -webkit-box-shadow: 2px 4px 6px #aaa, -2px 4px 6px #aaa;
-          box-shadow: 2px 4px 6px #aaa, -2px 4px 6px #aaa;
+  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125), -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+          box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125), -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
   border-radius: 20px 20px 20px 20px;
 }
 
