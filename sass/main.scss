@@ -10,7 +10,7 @@
 @import 'layout/navigations';
 // @import 'layout/grid';
 // @import 'layout/header';
-// @import 'layout/footer';
+@import 'layout/footer';
 // @import 'layout/forms';
 
 // @import 'components/buttons';
@@ -106,6 +106,7 @@
     border-radius: 20px;
     margin: 1.5rem;
     font-weight: 600;
+    box-shadow: 2px 2px 6px #aaa, -2px 2px 6px #aaa;
     
     &:nth-child(4) {
       background: rgb(245, 235, 237);
@@ -118,8 +119,9 @@
       opacity: 0.5;
     }
 
-    .purple {
-      color: purple;
+    .purple-fas {
+      color: map-get($colors, primary);
+      opacity: 1;
     }
 
     &_number {
@@ -127,13 +129,70 @@
       border-radius: 50%;
       background: map-get($colors, primary);
       color: white;
-      left: 4%;
-      height: 2rem;
-      width: 2rem;
+      left: 3%;
+      font-size: 1.5rem;
+      height: 2.5rem;
+      width: 2.5rem;
       text-align: center;
+      line-height: 2.5rem;
     }
   }
 }
 
 
+.restaurant-section {
+  padding: map-get($padding, section);
+  background: map-get($colors, grey-background);
+  display: flex;
+  flex-direction: column;
+  
+
+  &_title {
+    font-size: map-get($font-size, title);
+    font-weight: map-get($font-weight, title);
+    padding: map-get($padding, title);
+    margin-bottom: 2rem;
+  }
+
+  &_article {
+   display: flex;
+   flex-direction: column;
+   width: 95%;
+   height: 30%;
+   margin: 0 auto 2rem auto;
+   box-shadow: 2px 4px 6px #aaa, -2px 4px 6px #aaa;
+   border-radius: 20px 20px 20px 20px;
+   
+   
+
+    &_img {
+      border-radius: 20px 20px 0 0;
+      margin-bottom: 0;
+    }
+
+
+    &_description {
+      background: white;
+      border-radius: 0 0 20px 20px;
+      padding: 1rem;
+      
+
+      > p {
+        font-size: 1.5rem;
+      }
+
+      :first-child {
+        font-weight: bold;
+      }
+    }
+
+  
+  }
+
+}
+
+
+
+
+    
 
