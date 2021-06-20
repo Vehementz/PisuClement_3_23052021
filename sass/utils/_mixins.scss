@@ -1,3 +1,21 @@
-@mixin display-flex() {
-  
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin heart-raw {
+  font-size: map-get($font-size, heart);
+  opacity: map-get($opacity, heart);
 }

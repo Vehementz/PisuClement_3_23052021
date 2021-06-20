@@ -1,7 +1,7 @@
 
 @import 'utils/variables';
 // @import 'utils/functions';
-// @import 'utils/mixins';
+@import 'utils/mixins';
 // @import 'utils/placeholders';
 
 @import 'base/reset';
@@ -27,8 +27,7 @@
 
 
 .localisation {
-  display: flex;
-  flex-direction: row;
+  @include flex-row;
   justify-content: center;
   padding: 1rem 0;
   border-top: rgb(184, 176, 176) solid 2px;
@@ -47,8 +46,7 @@
 }
 
 .reservation {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   background: map-get($colors ,grey-background);
   padding: map-get($padding,section);
 
@@ -96,10 +94,10 @@
   }
 
   &_element {
+
+    @include flex-row;
     font-size: map-get($font-size, element);
     height: 6rem;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     background: map-get($colors, grey-background);
@@ -141,10 +139,10 @@
 
 
 .restaurant-section {
+  @include flex-column;
   padding: map-get($padding, section);
   background: map-get($colors, grey-background);
-  display: flex;
-  flex-direction: column;
+  
   
 
   &_title {
@@ -155,8 +153,7 @@
   }
 
   &_article {
-   display: flex;
-   flex-direction: column;
+   @include flex-column;
    width: 95%;
    height: 30%;
    margin: 0 auto 2rem auto;
@@ -194,14 +191,14 @@
       }
 
       .fa-heart {
+        @include  heart-raw;
         position: relative;
         display: flex;
         justify-content: flex-end;
         right: 1rem;
-        font-size: 2.5rem;
-        opacity: 0.5;
         bottom: 2rem;
         margin: -1.2rem 0;
+
       }
 
       
@@ -217,6 +214,47 @@
 
 
 
+/* Page la palette du goût */ 
+
+
+.fa-arrow-left {
+  position: absolute;
+  font-size: 2.5rem;
+  top: 4%;
+  left: 5%;
+  opacity: 0.5;
+  
+  
+  
+}
+
+.hero_image {
+  height: 50vh;
+  width: 100%;
+
+}
+
+.menu {
+  border-radius: 35px 35px 0 0;
+  position: relative;
+  bottom: 6rem;
+  padding: map-get($padding, section);
+  background: white;
+
+  &_container-title {
+
+    @include flex-row;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    
+     .fa-heart {
+      @include heart-raw;
+      align-self: center;
+      
+    }
+
+}
+
 
     
-
+}
