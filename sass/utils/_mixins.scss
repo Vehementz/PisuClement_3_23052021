@@ -17,5 +17,9 @@
 
 @mixin heart-raw {
   font-size: map-get($font-size, heart);
-  opacity: map-get($opacity, heart);
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  // opacity: map-get($opacity, heart);
 }

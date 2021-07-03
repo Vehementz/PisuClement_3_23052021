@@ -2,7 +2,7 @@
 @import 'utils/variables';
 // @import 'utils/functions';
 @import 'utils/mixins';
-// @import 'utils/placeholders';
+@import 'utils/placeholders';
 
 @import 'base/reset';
 @import 'base/typography';
@@ -175,6 +175,7 @@
       background: white;
       border-radius: 0 0 20px 20px;
       padding: 1rem;
+      position: relative;
       
 
       > p {
@@ -192,16 +193,28 @@
 
       .fa-heart {
         @include  heart-raw;
-        position: relative;
+        position: absolute;
         display: flex;
         justify-content: flex-end;
         right: 1rem;
         bottom: 2rem;
-        margin: -1.2rem 0;
+      }
+      
+      .heart-empty {
+        @extend .empty-heart;
 
+        &:hover {
+          @extend .empty-hover;
+        }
       }
 
-      
+      .heart-fill {
+        @extend .fill-heart;    
+
+          &:hover {
+            @extend .fill-hover
+          }
+      }
 
 
     }
@@ -235,26 +248,88 @@
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
   border-radius: 35px 35px 0 0;
   position: relative;
   bottom: 6rem;
   padding: map-get($padding, section);
   background: white;
+  width: 100%;
 
   &_container-title {
 
     @include flex-row;
-    justify-content: space-around;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    position: relative;
+    margin-left: 5%;
     
      .fa-heart {
       @include heart-raw;
+      right: 8%;
       align-self: center;
       
-    }
+     
+     }
+        .heart-empty {
+           @extend .empty-heart;
+           
+          &:hover {
+            @extend .empty-hover;
+          }
+        }
+        
+        .heart-fill {
+          @extend .fill-heart;
 
+          &:hover {
+            @extend .fill-hover;
+          }
+        }
+ 
 }
-
-
     
 }
+
+  .submenu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    &_title {
+      font-size: map-get($font-size, submenu-title);
+      font-weight: map-get($font-weight, submenu-title);
+      position: relative;
+      text-transform: uppercase;
+      margin: 2rem 0 1rem 0;
+
+      &:before {
+        content: "";
+        width: 3rem;
+        height: .3rem;
+        background-color: #99e2d0;
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
+      }
+    }
+
+    &_container {
+      display: flex;
+      flex-direction: column;
+
+    }
+    &_item {
+
+      background-color: #fff;
+      padding: 1rem;
+      display: flex;
+      border-radius: .75rem;
+      margin: 1rem 0;
+      box-shadow: 0.25rem 0.25rem 1rem;
+      cursor: pointer;
+      width: 95%;
+      margin: 2vh auto;
+    }
+  }
+
