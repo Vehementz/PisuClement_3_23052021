@@ -248,6 +248,8 @@
 }
 
 .menu {
+  position: absolute;
+  top: -4rem;
   display: flex;
   flex-direction: column;
   border-radius: 35px 35px 0 0;
@@ -274,7 +276,7 @@
         .heart-empty {
            @extend .empty-heart;
            
-          &:hover {
+          &:active {
             @extend .empty-hover;
           }
         }
@@ -282,7 +284,7 @@
         .heart-fill {
           @extend .fill-heart;
 
-          &:hover {
+          &:active {
             @extend .fill-hover;
           }
         }
@@ -304,7 +306,7 @@
       font-weight: map-get($font-weight, menu-title);
       position: relative;
       text-transform: uppercase;
-      margin: 2rem 0 1rem 0;
+      margin: 2rem 0 1rem 2.5%;
 
       &:before {
         content: "";
@@ -369,11 +371,15 @@
       opacity: 0.8;
     }
 
-    &:hover .submenu_component_wrap {
+    &:active .submenu_component_wrap {
       width: 10rem;
       transform-origin: left;
-      transition-duration: 2s 2s ease-in-out;
-      transition: width 1s ease-in-out 0.2s;
+      transition: width 0.4s ease-in-out 0.2s;
+    }
+
+    &:active .submenu_component_icon {
+      transform: rotate(360deg);
+     
     }
 
     &_wrap {
@@ -381,29 +387,35 @@
       order: 2;
       align-items: center;
       justify-content: center;
-      border-radius: .75rem;
+      border-radius: 0 .75rem .75rem 0;
       box-shadow: 0.25rem 0.25rem 1rem ;
       cursor: pointer;
       width: 0;
       height: 100%;
       background-color: #99e2d0;
-      
       overflow : hidden;
       margin-left: 2rem;
-      
-      &:hover {
-        opacity: 1;
-        
-      }
 
-      
     }
+    
     &_icon {
       font-size: 2rem;
       color: white;
+      transition: transform 0.4s 0.2s ease-in-out;
+      
+
     }
    
   }
+
+
+  .command_button {
+    @extend .reservation_button;
+    margin: 0 auto 6rem auto;
+    padding: 1.5rem 4rem;
+
+  }
+
 
   @keyframes i-rotate {
     0% {
