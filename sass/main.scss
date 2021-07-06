@@ -297,8 +297,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    transition-property: width;
-    transition: 1s 1s;
+   
      
     
     &_title {
@@ -322,35 +321,47 @@
     &_container {
       display: flex;
       flex-direction: column;
+      
 
     }
    
   }
-
+  
+  
   .submenu_component {
-
-    background-color: #fff;
     display: flex;
     flex-direction: row;
+    height: 100%;
     border-radius: .75rem;
-    box-shadow: 0.25rem 0.25rem 1rem;
+    box-shadow: 0.25rem 0.25rem 0.7rem;
     cursor: pointer;
+    width: auto;
+    margin: 1.5vh auto;
     width: 95%;
-    margin: 2vh auto;
-    height: 5rem;
+    background-color: #fff;
+    align-items: center;
+    padding-left: 1rem;
+  
+
+    
+  
+    
 
     &_header {
+      display: flex;
+      flex-direction: column;
       width: 100%;
       height: 100%;
       order: 1;
-      margin: 0.6rem 0 0.6rem 0.8rem;
-      line-height: 2rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      
     }
 
     &_title {
       white-space: nowrap;
       text-overflow: ellipsis;
-      overflow: hidden;
+     
       font-size: map-get($font-size, submenu-title);
       font-weight: map-get($font-weight, submenu-title);
   
@@ -359,8 +370,10 @@
     &_text {
       white-space: nowrap;
       text-overflow: ellipsis;
-      overflow: hidden;
       font-size: map-get($font-size, text-component);
+      overflow: hidden;
+      opacity: 0.8;
+      
     }
    
    
@@ -368,11 +381,18 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      opacity: 0.8;
+      
+      overflow: hidden;
+      
+      span {
+        font-weight: bold;
+       
+      }
+
     }
 
     &:active .submenu_component_wrap {
-      width: 10rem;
+      width: 15rem;
       transform-origin: left;
       transition: width 0.4s ease-in-out 0.2s;
     }
@@ -384,6 +404,7 @@
 
     &_wrap {
       display: flex;
+      flex-direction: column;
       order: 2;
       align-items: center;
       justify-content: center;
@@ -395,6 +416,8 @@
       background-color: #99e2d0;
       overflow : hidden;
       margin-left: 2rem;
+      padding: auto;
+      padding: 2rem 0;
 
     }
     
@@ -406,6 +429,8 @@
 
     }
    
+  
+    
   }
 
 
@@ -416,13 +441,4 @@
 
   }
 
-
-  @keyframes i-rotate {
-    0% {
-        transform: rotate(180deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
