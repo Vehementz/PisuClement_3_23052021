@@ -350,7 +350,7 @@ footer .fas, footer .far {
           flex-direction: row;
   font-size: 1.2rem;
   position: relative;
-  margin-left: 5%;
+  margin-left: 2.5%;
 }
 
 .menu_container-title .fa-heart {
@@ -445,6 +445,7 @@ footer .fas, footer .far {
           order: 1;
   text-overflow: ellipsis;
   overflow: hidden;
+  line-height: 1.8rem;
 }
 
 .submenu_component_title {
@@ -511,8 +512,6 @@ footer .fas, footer .far {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 0 .75rem .75rem 0;
-  -webkit-box-shadow: 0.25rem 0.25rem 1rem;
-          box-shadow: 0.25rem 0.25rem 1rem;
   cursor: pointer;
   width: 0;
   height: 100%;
