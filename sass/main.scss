@@ -341,11 +341,31 @@
     background-color: #fff;
     align-items: center;
     padding-left: 1rem;
-  
+    
 
-    
+    @for $i from 1 through 9 {
+      &-#{$i} {
+        opacity: 0;
+        animation-name: opacity;
+        animation-duration: 0.3s * $i;
+        animation-delay: 0.2s * $i;
+        transform-origin: center;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        
+        @keyframes opacity{
+          from{
+              opacity: 0;
+          }
+
+          to{
+              opacity: 1;
+          }
+      }
+
+      }
   
-    
+    }
 
     &_header {
       display: flex;
