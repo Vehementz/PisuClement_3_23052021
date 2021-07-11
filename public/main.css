@@ -22,6 +22,25 @@
   z-index: 2;
 }
 
+.reservation_button, .command_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem auto;
+  border-radius: 4em;
+  padding: 1.5rem 2rem;
+  color: white;
+  font-weight: 600;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e85ab4), to(#bd24f0));
+  background: linear-gradient(#e85ab4, #bd24f0);
+  border: none;
+  cursor: pointer;
+}
+
 *, ::before, ::after {
   margin: 0;
   padding: 0;
@@ -434,8 +453,8 @@ footer .fas, footer .far {
   opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
   -webkit-transform-origin: center;
@@ -464,12 +483,22 @@ footer .fas, footer .far {
   }
 }
 
+.submenu_component-1:hover {
+  background-color: #f2f2f2;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
 .submenu_component-2 {
   opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
   -webkit-transform-origin: center;
@@ -489,12 +518,22 @@ footer .fas, footer .far {
   }
 }
 
+.submenu_component-2:hover {
+  background-color: #f2f2f2;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
 .submenu_component-3 {
   opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
-  -webkit-animation-duration: 0.9s;
-          animation-duration: 0.9s;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
   -webkit-transform-origin: center;
@@ -514,12 +553,22 @@ footer .fas, footer .far {
   }
 }
 
+.submenu_component-3:hover {
+  background-color: #f2f2f2;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
 .submenu_component-4 {
   opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
-  -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
   -webkit-transform-origin: center;
@@ -539,12 +588,22 @@ footer .fas, footer .far {
   }
 }
 
+.submenu_component-4:hover {
+  background-color: #f2f2f2;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
 .submenu_component-5 {
   opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
   -webkit-transform-origin: center;
@@ -562,6 +621,16 @@ footer .fas, footer .far {
   to {
     opacity: 1;
   }
+}
+
+.submenu_component-5:hover {
+  background-color: #f2f2f2;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .submenu_component-6 {
@@ -589,12 +658,22 @@ footer .fas, footer .far {
   }
 }
 
+.submenu_component-6:hover {
+  background-color: #f2f2f2;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
 .submenu_component-7 {
   opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
-  -webkit-animation-duration: 2.1s;
-          animation-duration: 2.1s;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
   -webkit-animation-delay: 1.4s;
           animation-delay: 1.4s;
   -webkit-transform-origin: center;
@@ -614,12 +693,22 @@ footer .fas, footer .far {
   }
 }
 
+.submenu_component-7:hover {
+  background-color: #f2f2f2;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
 .submenu_component-8 {
   opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
-  -webkit-animation-duration: 2.4s;
-          animation-duration: 2.4s;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
   -webkit-animation-delay: 1.6s;
           animation-delay: 1.6s;
   -webkit-transform-origin: center;
@@ -639,12 +728,22 @@ footer .fas, footer .far {
   }
 }
 
+.submenu_component-8:hover {
+  background-color: #f2f2f2;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
 .submenu_component-9 {
   opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
-  -webkit-animation-duration: 2.7s;
-          animation-duration: 2.7s;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
   -webkit-animation-delay: 1.8s;
           animation-delay: 1.8s;
   -webkit-transform-origin: center;
@@ -662,6 +761,16 @@ footer .fas, footer .far {
   to {
     opacity: 1;
   }
+}
+
+.submenu_component-9:hover {
+  background-color: #f2f2f2;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .submenu_component_header {
@@ -768,5 +877,10 @@ footer .fas, footer .far {
 .command_button {
   margin: 0 auto 6rem auto;
   padding: 1.5rem 4rem;
+}
+
+.command_button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e43da7), to(#b20fe8));
+  background: linear-gradient(#e43da7, #b20fe8);
 }
 /*# sourceMappingURL=main.css.map */

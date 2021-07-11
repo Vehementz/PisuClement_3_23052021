@@ -341,13 +341,14 @@
     background-color: #fff;
     align-items: center;
     padding-left: 1rem;
+   
     
 
     @for $i from 1 through 9 {
       &-#{$i} {
         opacity: 0;
         animation-name: opacity;
-        animation-duration: 0.3s * $i;
+        animation-duration: 0.2s * 9;
         animation-delay: 0.2s * $i;
         transform-origin: center;
         animation-fill-mode: forwards;
@@ -361,6 +362,12 @@
           to{
               opacity: 1;
           }
+      }
+      &:hover {
+        background-color: darken($color: #fff, $amount: 5%);
+        transform: scale(1.02);
+        transition: transform 0.3s ease-in-out;
+        
       }
 
       }
@@ -459,6 +466,9 @@
     margin: 0 auto 6rem auto;
     padding: 1.5rem 4rem;
 
+      &:hover {
+        background: linear-gradient(#e43da7, #b20fe8)
+      }
   }
 
 
