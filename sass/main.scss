@@ -14,15 +14,68 @@
 // @import 'layout/forms';
 
 // @import 'components/buttons';
-// @import 'components/carousel';
 // @import 'components/cover';
 // @import 'components/dropdown';
 
 // @import 'pages/home';
 // @import 'pages/contact';
 
-// @import 'themes/theme';
-// @import 'themes/admin';
+
+
+.loader-container {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    right: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .loader-container {
+    animation: fadeOut 2s forwards;
+  }
+  
+  @keyframes fadeOut {
+    
+    0% {
+      opacity: 1;
+    }
+
+    30% {
+      opacity: 0.9;
+    }
+
+    80% {
+      opacity: 0.8;
+    }
+
+    90% {
+      opacity: 0.7;
+    }
+
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  
+  }
+  
+  .loader {
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 5px solid transparent;
+  }
+  
+
 
 
 
@@ -297,8 +350,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-   
-     
+
     
     &_title {
       font-size: map-get($font-size, menu-title);
@@ -306,6 +358,8 @@
       position: relative;
       text-transform: uppercase;
       margin: 2rem 0 1rem 2.5%;
+
+      
 
       &:before {
         content: "";
@@ -316,7 +370,29 @@
         left: 0;
         bottom: -0.5rem;
       }
+
+      @for $i from 1 through 3 {
+        &-#{$i} {
+          opacity: 0;
+          animation-name: opacity;
+          animation-duration: 0.2s * 3;
+          animation-delay: 2s + (0.6s * $i);
+          transform-origin: center;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-in-out;
+          
+          @keyframes opacity{
+            from{
+                opacity: 0;
+            }
+  
+            to{
+                opacity: 1;
+            }
+        }
+      }
     }
+  }
 
     &_container {
       display: flex;
@@ -349,7 +425,7 @@
         opacity: 0;
         animation-name: opacity;
         animation-duration: 0.2s * 9;
-        animation-delay: 0.2s * $i;
+        animation-delay: 2s + (0.2s * $i);
         transform-origin: center;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in-out;
@@ -363,6 +439,8 @@
               opacity: 1;
           }
       }
+
+
       &:hover {
         background-color: darken($color: #fff, $amount: 5%);
         transform: scale(1.02);

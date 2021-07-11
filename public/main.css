@@ -112,6 +112,78 @@ footer .fas, footer .far {
   margin-right: 1rem;
 }
 
+.loader-container {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  right: 0;
+  width: 100%;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader-container {
+  -webkit-animation: fadeOut 2s forwards;
+          animation: fadeOut 2s forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 5px solid transparent;
+}
+
 .localisation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -416,6 +488,90 @@ footer .fas, footer .far {
   bottom: -0.5rem;
 }
 
+.submenu_title-1 {
+  opacity: 0;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.submenu_title-2 {
+  opacity: 0;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.submenu_title-3 {
+  opacity: 0;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-delay: 3.8s;
+          animation-delay: 3.8s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .submenu_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -455,23 +611,14 @@ footer .fas, footer .far {
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-}
-
-@-webkit-keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 @keyframes opacity {
@@ -499,8 +646,8 @@ footer .fas, footer .far {
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-animation-fill-mode: forwards;
@@ -534,8 +681,8 @@ footer .fas, footer .far {
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-animation-fill-mode: forwards;
@@ -569,8 +716,8 @@ footer .fas, footer .far {
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-animation-fill-mode: forwards;
@@ -604,8 +751,8 @@ footer .fas, footer .far {
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-animation-fill-mode: forwards;
@@ -639,8 +786,8 @@ footer .fas, footer .far {
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-animation-fill-mode: forwards;
@@ -674,8 +821,8 @@ footer .fas, footer .far {
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-animation-fill-mode: forwards;
@@ -709,8 +856,8 @@ footer .fas, footer .far {
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-animation-fill-mode: forwards;
@@ -744,8 +891,8 @@ footer .fas, footer .far {
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+  -webkit-animation-delay: 3.8s;
+          animation-delay: 3.8s;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-animation-fill-mode: forwards;
