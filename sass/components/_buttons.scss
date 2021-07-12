@@ -1,0 +1,28 @@
+.reservation_button {
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  margin: 1rem auto;
+  border-radius: 4em;
+  padding: 1.5rem 2rem;
+  color: white;
+  font-weight: 600;
+  background: map-get($colors, background-btn);
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(#e43da7, #b20fe8)
+  }
+}
+
+
+.command_button {
+  @extend .reservation_button;
+  margin: 0 auto 6rem auto;
+  padding: 1.5rem 4rem;
+
+    &:hover {
+      background: linear-gradient(#e43da7, #b20fe8)
+    }
+}
