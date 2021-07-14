@@ -204,8 +204,8 @@ footer .fas, footer .far {
 .loader {
   display: block;
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 75px;
+  height: 75px;
   border: 5px solid transparent;
   -webkit-animation: spinspin 2s infinite;
           animation: spinspin 2s infinite;
