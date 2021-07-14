@@ -489,7 +489,7 @@
     &_title {
       white-space: nowrap;
       text-overflow: ellipsis;
-     
+      overflow: hidden;
       font-size: map-get($font-size, submenu-title);
       font-weight: map-get($font-weight, submenu-title);
   

@@ -995,6 +995,7 @@ footer .fas, footer .far {
 .submenu_component_title {
   white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
   font-size: 1.6rem;
   font-weight: bold;
 }
