@@ -8,6 +8,10 @@
 .empty-hover, .restaurant-section_article_description .heart-empty:hover, .menu_container-title .heart-empty:active {
   z-index: 1;
   opacity: 0;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 .fill-heart, .restaurant-section_article_description .heart-fill, .menu_container-title .heart-fill {
@@ -120,7 +124,7 @@ footer .fas, footer .far {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1rem auto;
+  margin: 1rem auto 5rem auto;
   border-radius: 4em;
   padding: 1.5rem 2rem;
   color: white;
@@ -129,11 +133,15 @@ footer .fas, footer .far {
   background: linear-gradient(#e85ab4, #bd24f0);
   border: none;
   cursor: pointer;
+  -webkit-box-shadow: 3px 5px 10px #bebebe, -3px 5px 10px #bebebe;
+          box-shadow: 3px 5px 10px #bebebe, -3px 5px 10px #bebebe;
 }
 
 .reservation_button:hover, .command_button:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e43da7), to(#b20fe8));
-  background: linear-gradient(#e43da7, #b20fe8);
+  background: -webkit-gradient(linear, left top, right bottom, from(#ed80c5), to(#cb50f4));
+  background: linear-gradient(to right bottom, #ed80c5, #cb50f4);
+  -webkit-box-shadow: 3px 5px 10px #8b8b8b, -3px 5px 10px #8b8b8b;
+          box-shadow: 3px 5px 10px #8b8b8b, -3px 5px 10px #8b8b8b;
 }
 
 .command_button {
@@ -142,8 +150,10 @@ footer .fas, footer .far {
 }
 
 .command_button:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e43da7), to(#b20fe8));
-  background: linear-gradient(#e43da7, #b20fe8);
+  background: -webkit-gradient(linear, left top, right bottom, from(#ed80c5), to(#cb50f4));
+  background: linear-gradient(to right bottom, #ed80c5, #cb50f4);
+  -webkit-box-shadow: 3px 5px 10px #8b8b8b, -3px 5px 10px #8b8b8b;
+          box-shadow: 3px 5px 10px #8b8b8b, -3px 5px 10px #8b8b8b;
 }
 
 .loader-container {
@@ -342,18 +352,14 @@ footer .fas, footer .far {
 }
 
 .operation-section_element:hover .fas {
-  color: purple;
+  color: #9356DC;
   opacity: 1;
-}
-
-.operation-section_element:hover .operation-section_element_number {
-  background: #df00a1;
 }
 
 .operation-section_element .fas {
   position: absolute;
   left: 14%;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .operation-section_element_number {
@@ -367,6 +373,7 @@ footer .fas, footer .far {
   width: 2.5rem;
   text-align: center;
   line-height: 2.5rem;
+  opacity: 1;
 }
 
 .restaurant-section {

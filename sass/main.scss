@@ -169,28 +169,20 @@
       background-color: rgb(245, 235, 237);
 
       .fas {
-        color: purple;
+        color: map-get($colors, primary);
         opacity: 1;
       }
-
-      .operation-section_element_number {
-        background: darken($color: map-get($colors, secondary), $amount: 30);
-        
-      }
     }
-    
+     
     
 
     .fas {
       position: absolute;
       left: 14%;
-      opacity: 0.5;
+      opacity: 0.6;
     }
 
-    // .purple-fas {
-    //   color: map-get($colors, primary);
-    //   opacity: 1;
-    // }
+   
 
     &_number {
       position: absolute;
@@ -203,6 +195,7 @@
       width: 2.5rem;
       text-align: center;
       line-height: 2.5rem;
+      opacity: 1;
     }
   }
 }

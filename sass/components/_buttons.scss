@@ -2,7 +2,7 @@
   display: flex;
   font-size: 1.5rem;
   justify-content: center;
-  margin: 1rem auto;
+  margin: 1rem auto 5rem auto;
   border-radius: 4em;
   padding: 1.5rem 2rem;
   color: white;
@@ -10,9 +10,12 @@
   background: map-get($colors, background-btn);
   border: none;
   cursor: pointer;
+  box-shadow: map-get($shadow, button);
+
 
   &:hover {
-    background: linear-gradient(#e43da7, #b20fe8)
+    background: linear-gradient(to right bottom, lighten(#e43da7, 15), lighten(#b20fe8, 15));
+    box-shadow: 3px 5px 10px darken(rgb(190, 190, 190), 20%), -3px 5px 10px darken(rgb(190, 190, 190),20%);
   }
 }
 
@@ -23,6 +26,8 @@
   padding: 1.5rem 4rem;
 
     &:hover {
-      background: linear-gradient(#e43da7, #b20fe8)
+      background: linear-gradient(to right bottom, lighten(#e43da7, 15), lighten(#b20fe8, 15));
+      box-shadow: 3px 5px 10px darken(rgb(190, 190, 190), 20%), -3px 5px 10px darken(rgb(190, 190, 190),20%);
+      
     }
 }
