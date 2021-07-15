@@ -201,8 +201,8 @@ footer .fas, footer .far {
   width: 75px;
   height: 75px;
   border: 5px solid transparent;
-  -webkit-animation: spinspin 2s forwards;
-          animation: spinspin 2s forwards;
+  -webkit-animation: spinspin 2s infinite;
+          animation: spinspin 2s infinite;
 }
 
 @-webkit-keyframes spinspin {
@@ -550,7 +550,7 @@ footer .fas, footer .far {
 }
 
 .submenu_title-1 {
-  opacity: 1;
+  opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 0.6s;
@@ -584,7 +584,7 @@ footer .fas, footer .far {
 }
 
 .submenu_title-2 {
-  opacity: 1;
+  opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 0.6s;
@@ -609,7 +609,7 @@ footer .fas, footer .far {
 }
 
 .submenu_title-3 {
-  opacity: 1;
+  opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 0.6s;
@@ -667,7 +667,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-1 {
-  opacity: 1;
+  opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -702,7 +702,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-2 {
-  opacity: 1;
+  opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -737,7 +737,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-3 {
-  opacity: 1;
+  opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -772,7 +772,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-4 {
-  opacity: 1;
+  opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -807,7 +807,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-5 {
-  opacity: 1;
+  opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -842,7 +842,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-6 {
-  opacity: 1;
+  opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -877,7 +877,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-7 {
-  opacity: 1;
+  opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -912,7 +912,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-8 {
-  opacity: 1;
+  opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -947,7 +947,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-9 {
-  opacity: 1;
+  opacity: 0;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -1126,14 +1126,47 @@ button:focus.heart-empty {
   -webkit-text-fill-color: #FFFFFF;
 }
 
-.fa-heart:active.far,
-.fa-heart:checked.far,
-.fa-heart:focus.far {
-  -webkit-animation: opacity 1s forwards;
-          animation: opacity 1s forwards;
+.fa-heart:active.far {
+  opacity: 0;
 }
 
-@keyframes opacity {
+.button-heart-2 {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  right: 1rem;
+  bottom: 0;
+  color: none;
+}
+
+.button-heart-2 .fas {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: none;
+  background-image: linear-gradient(350deg, #FF79DA 0%, #9356DC 100%);
+}
+
+.fa-heart:active.far,
+.fa-heart:checked.far,
+.fa-heart:focus.far,
+.fa-heart:hover.far {
+  -webkit-animation: apparition-heart 1s forwards;
+          animation: apparition-heart 1s forwards;
+}
+
+@-webkit-keyframes apparition-heart {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes apparition-heart {
   0% {
     opacity: 1;
   }
