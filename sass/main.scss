@@ -223,16 +223,29 @@
    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125), -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
 
    border-radius: 20px 20px 20px 20px;
+   position: relative;
+   
    
    
 
     &_img {
       height: 15rem;
+      width: 100%;
       border-radius: 20px 20px 0 0;
       margin-bottom: 0;
       object-fit: cover;
     }
 
+    &_new {
+      position: absolute;
+      font-size: 1.2rem;
+      top: 1.5rem;
+      right: 1.5rem;
+      background-color: map-get($colors, third);
+      color: darken(map-get($colors, third), 45%);
+      padding: 0.5rem;
+
+    }
 
     &_description {
       background: white;
@@ -261,24 +274,45 @@
         justify-content: flex-end;
         right: 1rem;
         bottom: 2rem;
-      }
+        
+        
+        
+
+      //   &:active.heart-empty
+      //   ,&:focus.heart-empty {
+      //     animation: coeur 0.3s 0s ease-in-out forwards;
+        
+      //     @keyframes coeur {
+
+      //       0% {
+      //         opacity: 1;
+      //       }
+          
+      //       100% {
+      //         opacity: 0
+      //       }
+      //      }
+      //   }
+      // }
       
-      .heart-empty {
-        @extend .empty-heart;
 
-        &:hover {
-          @extend .empty-hover;
-        }
+
+      // .heart-empty {
+      //   @extend .empty-heart;
+        
+      //   // &:active {
+      //   //   @extend .empty-hover;
+      //   // }
+      // }
+
+      // .heart-fill {
+      //   @extend .fill-heart;    
+
+      //     // &:active {
+      //     //   @extend .fill-hover
+      //     // }
+      // }
       }
-
-      .heart-fill {
-        @extend .fill-heart;    
-
-          &:hover {
-            @extend .fill-hover
-          }
-      }
-
 
     }
   
@@ -337,23 +371,28 @@
       @include heart-raw;
       right: 8%;
       align-self: center;
-      
-     
      }
+
+     button:focus.heart-empty {
+       opacity: 0;
+     }
+
+     
+
         .heart-empty {
            @extend .empty-heart;
            
-          &:active {
-            @extend .empty-hover;
-          }
+          // &:active {
+          //   @extend .empty-hover;
+          // }
         }
         
         .heart-fill {
           @extend .fill-heart;
 
-          &:active {
-            @extend .fill-hover;
-          }
+          // &:active {
+          //   @extend .fill-hover;
+          // }
         }
  
 }
@@ -554,5 +593,71 @@
   }
 
 
- 
 
+  button:focus.heart-empty
+   {
+    animation: coeur 0.3s 0s ease-in-out forwards;
+  
+    @keyframes coeur {
+
+      0% {
+        opacity: 1;
+      }
+    
+      100% {
+        opacity: 0
+      }
+     }
+  }
+
+
+  .button-heart-1 {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    right: 1rem;
+    bottom: 0;
+    color: none; 
+
+    .far {
+      color: white;
+      z-index: 2;
+      -webkit-text-stroke: 3px black;
+      -webkit-text-fill-color: #FFFFFF;
+    }
+  }
+
+  .fa-heart:active.far,
+  .fa-heart:checked.far,
+  .fa-heart:focus.far {
+    animation: opacity 1s forwards;
+
+    @keyframes opacity {
+
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+  }
+
+  .button-heart-2 {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    right: 1rem;
+    bottom: 0;
+    color: none;
+    
+
+    .fas {
+      // -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: none;
+      background-image: linear-gradient(350deg, #FF79DA 0%, #9356DC 100%);
+    }
+  }
