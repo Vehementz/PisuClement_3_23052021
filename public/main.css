@@ -201,8 +201,8 @@ footer .fas, footer .far {
   width: 75px;
   height: 75px;
   border: 5px solid transparent;
-  -webkit-animation: spinspin 2s infinite;
-          animation: spinspin 2s infinite;
+  -webkit-animation: spinspin 2s forwards;
+          animation: spinspin 2s forwards;
 }
 
 @-webkit-keyframes spinspin {
@@ -563,6 +563,7 @@ footer .fas, footer .far {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes opacity {
@@ -597,6 +598,7 @@ footer .fas, footer .far {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes opacity {
@@ -622,6 +624,7 @@ footer .fas, footer .far {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes opacity {
