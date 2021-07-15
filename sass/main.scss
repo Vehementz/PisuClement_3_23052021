@@ -267,53 +267,7 @@
         opacity: 0.5;
       }
 
-      .fa-heart {
-        @include  heart-raw;
-        position: absolute;
-        display: flex;
-        justify-content: flex-end;
-        right: 1rem;
-        bottom: 2rem;
-        
-        
-        
-
-      //   &:active.heart-empty
-      //   ,&:focus.heart-empty {
-      //     animation: coeur 0.3s 0s ease-in-out forwards;
-        
-      //     @keyframes coeur {
-
-      //       0% {
-      //         opacity: 1;
-      //       }
-          
-      //       100% {
-      //         opacity: 0
-      //       }
-      //      }
-      //   }
-      // }
-      
-
-
-      // .heart-empty {
-      //   @extend .empty-heart;
-        
-      //   // &:active {
-      //   //   @extend .empty-hover;
-      //   // }
-      // }
-
-      // .heart-fill {
-      //   @extend .fill-heart;    
-
-      //     // &:active {
-      //     //   @extend .fill-hover
-      //     // }
-      // }
-      }
-
+    
     }
   
 
@@ -367,33 +321,13 @@
     position: relative;
     margin-left: 2.5%;
     
-     .fa-heart {
-      @include heart-raw;
-      right: 8%;
-      align-self: center;
-     }
+     
 
-     button:focus.heart-empty {
-       opacity: 0;
-     }
+    
 
      
 
-        .heart-empty {
-           @extend .empty-heart;
-           
-          // &:active {
-          //   @extend .empty-hover;
-          // }
-        }
-        
-        .heart-fill {
-          @extend .fill-heart;
-
-          // &:active {
-          //   @extend .fill-hover;
-          // }
-        }
+      
  
 }
     
@@ -594,21 +528,17 @@
 
 
 
-  button:focus.heart-empty
-   {
-    animation: coeur 0.3s 0s ease-in-out forwards;
-  
-    @keyframes coeur {
-
-      0% {
-        opacity: 1;
-      }
+  figure .fa-heart {
+    @include  heart-raw;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    right: 1rem;
+    bottom: 2rem;
     
-      100% {
-        opacity: 0
-      }
-     }
+
   }
+
 
 
   .button-heart-1 {
@@ -618,49 +548,18 @@
     right: 1rem;
     bottom: 0;
     color: none; 
+    background: none;
+    border: none;
 
     .far {
       color: white;
       z-index: 2;
-      -webkit-text-stroke: 3px black;
+      -webkit-text-stroke: 1px black;
       -webkit-text-fill-color: #FFFFFF;
     }
   }
 
-  .fa-heart:active.far {
-    opacity: 0;
-  }
-
-  .button-heart-2 {
-    position: absolute;
-    display: flex;
-    justify-content: flex-end;
-    right: 1rem;
-    bottom: 0;
-    color: none;
-    
-
-    .fas {
-      // -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: none;
-      background-image: linear-gradient(350deg, #FF79DA 0%, #9356DC 100%);
-    }
-  }
-
-
   
-
-  
-
-
-
-
-
-
-
-
-
 
 
 
@@ -669,9 +568,10 @@
   .fa-heart:checked.far,
   .fa-heart:focus.far,
   .fa-heart:hover.far {
-    animation: apparition-heart 1s forwards;
+    animation: apparition-hearts 1s ease-in-out forwards;
+    
 
-    @keyframes apparition-heart  {
+    @keyframes apparition-hearts  {
 
       0% {
         opacity: 1;
@@ -691,6 +591,8 @@
     right: 1rem;
     bottom: 0;
     color: none;
+    background: none;
+    border: none;
     
 
     .fas {
@@ -698,5 +600,75 @@
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke: none;
       background-image: linear-gradient(350deg, #FF79DA 0%, #9356DC 100%);
+      
+    }
+  }
+
+
+
+
+/******************** button menu *********************/
+
+
+  .menu_button-heart-1 {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    right: 5%;
+    top: 5rem;
+    color: none; 
+    background: none;
+    border: none;
+
+    .far {
+      z-index: 2;
+      background: white;
+      font-size: 2rem;
+      
+    }
+  }
+
+
+
+
+
+
+  .menu_button-heart:active.far,
+  .menu_button-heart:checked.far,
+  .menu_button-heart:focus.far,
+  .menu_button-heart:hover.far {
+    animation: apparition-heart 1s ease-in-out forwards;
+
+    @keyframes apparition-heart  {
+
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+  }
+
+  .menu_button-heart-2 {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    right: 5%;
+    top: 5rem;
+    color: none;
+    background: none;
+    border: none;
+    
+
+    .fas {
+      // -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: none;
+      background-image: linear-gradient(350deg, #FF79DA 0%, #9356DC 100%);
+      font-size: 2rem;
+      
     }
   }
