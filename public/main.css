@@ -563,7 +563,6 @@ footer .fas, footer .far {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes opacity {
@@ -598,7 +597,6 @@ footer .fas, footer .far {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
 }
 
 @keyframes opacity {
@@ -624,7 +622,6 @@ footer .fas, footer .far {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
 }
 
 @keyframes opacity {
@@ -670,7 +667,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-1 {
-  opacity: 0;
+  opacity: 1;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -705,7 +702,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-2 {
-  opacity: 0;
+  opacity: 1;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -740,7 +737,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-3 {
-  opacity: 0;
+  opacity: 1;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -775,7 +772,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-4 {
-  opacity: 0;
+  opacity: 1;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -810,7 +807,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-5 {
-  opacity: 0;
+  opacity: 1;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -845,7 +842,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-6 {
-  opacity: 0;
+  opacity: 1;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -880,7 +877,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-7 {
-  opacity: 0;
+  opacity: 1;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -915,7 +912,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-8 {
-  opacity: 0;
+  opacity: 1;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
@@ -950,7 +947,7 @@ footer .fas, footer .far {
 }
 
 .submenu_component-9 {
-  opacity: 0;
+  opacity: 1;
   -webkit-animation-name: opacity;
           animation-name: opacity;
   -webkit-animation-duration: 1.8s;
