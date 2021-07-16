@@ -19,6 +19,13 @@
   cursor: pointer;
 }
 
+.heart-hover, .button-heart-2 .fas, .menu_button-heart-2 .fas {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e85ab4), to(#bd24f0));
+  background-image: linear-gradient(#e85ab4, #bd24f0);
+}
+
 *, ::before, ::after {
   margin: 0;
   padding: 0;
@@ -130,6 +137,156 @@ footer .fas, footer .far {
           box-shadow: 3px 5px 10px #8b8b8b, -3px 5px 10px #8b8b8b;
 }
 
+/*  Begin restaurants presentation button  */
+figure .fa-heart {
+  font-size: 2.5rem;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  right: 1rem;
+  bottom: 2rem;
+}
+
+.button-heart-1 {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  right: 1rem;
+  bottom: 0;
+  color: none;
+  background: none;
+  border: none;
+}
+
+.button-heart-1 .far {
+  color: white;
+  z-index: 2;
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: #FFFFFF;
+}
+
+.fa-heart:active.far,
+.fa-heart:checked.far,
+.fa-heart:focus.far,
+.fa-heart:hover.far {
+  -webkit-animation: apparition-hearts 1s ease-in-out forwards;
+          animation: apparition-hearts 1s ease-in-out forwards;
+}
+
+@-webkit-keyframes apparition-hearts {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes apparition-hearts {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.button-heart-2 {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  right: 1rem;
+  bottom: 0;
+  color: none;
+  background: none;
+  border: none;
+}
+
+/*  End restaurants presentation button  */
+/******************** Begin button menu *********************/
+.menu_button-heart-1 {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  right: 5%;
+  top: 5rem;
+  color: none;
+  background: none;
+  border: none;
+}
+
+.menu_button-heart-1 .far {
+  z-index: 2;
+  background: white;
+  font-size: 2rem;
+}
+
+.menu_button-heart:active.far,
+.menu_button-heart:checked.far,
+.menu_button-heart:focus.far,
+.menu_button-heart:hover.far {
+  -webkit-animation: apparition-heart 1s ease-in-out forwards;
+          animation: apparition-heart 1s ease-in-out forwards;
+}
+
+@-webkit-keyframes apparition-heart {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes apparition-heart {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.menu_button-heart-2 {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  right: 5%;
+  top: 5rem;
+  color: none;
+  background: none;
+  border: none;
+}
+
+.menu_button-heart-2 .fas {
+  font-size: 2rem;
+}
+
+/******************** End button menu *********************/
 .loader-container {
   position: fixed;
   z-index: 10;
@@ -1035,161 +1192,5 @@ footer .fas, footer .far {
   transition: -webkit-transform 0.4s 0.2s ease-in-out;
   transition: transform 0.4s 0.2s ease-in-out;
   transition: transform 0.4s 0.2s ease-in-out, -webkit-transform 0.4s 0.2s ease-in-out;
-}
-
-figure .fa-heart {
-  font-size: 2.5rem;
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  cursor: pointer;
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  right: 1rem;
-  bottom: 2rem;
-}
-
-.button-heart-1 {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  right: 1rem;
-  bottom: 0;
-  color: none;
-  background: none;
-  border: none;
-}
-
-.button-heart-1 .far {
-  color: white;
-  z-index: 2;
-  -webkit-text-stroke: 1px black;
-  -webkit-text-fill-color: #FFFFFF;
-}
-
-.fa-heart:active.far,
-.fa-heart:checked.far,
-.fa-heart:focus.far,
-.fa-heart:hover.far {
-  -webkit-animation: apparition-hearts 1s ease-in-out forwards;
-          animation: apparition-hearts 1s ease-in-out forwards;
-}
-
-@-webkit-keyframes apparition-hearts {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes apparition-hearts {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.button-heart-2 {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  right: 1rem;
-  bottom: 0;
-  color: none;
-  background: none;
-  border: none;
-}
-
-.button-heart-2 .fas {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: none;
-  background-image: linear-gradient(350deg, #FF79DA 0%, #9356DC 100%);
-}
-
-/******************** button menu *********************/
-.menu_button-heart-1 {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  right: 5%;
-  top: 5rem;
-  color: none;
-  background: none;
-  border: none;
-}
-
-.menu_button-heart-1 .far {
-  z-index: 2;
-  background: white;
-  font-size: 2rem;
-}
-
-.menu_button-heart:active.far,
-.menu_button-heart:checked.far,
-.menu_button-heart:focus.far,
-.menu_button-heart:hover.far {
-  -webkit-animation: apparition-heart 1s ease-in-out forwards;
-          animation: apparition-heart 1s ease-in-out forwards;
-}
-
-@-webkit-keyframes apparition-heart {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes apparition-heart {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.menu_button-heart-2 {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  right: 5%;
-  top: 5rem;
-  color: none;
-  background: none;
-  border: none;
-}
-
-.menu_button-heart-2 .fas {
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: none;
-  background-image: linear-gradient(350deg, #FF79DA 0%, #9356DC 100%);
-  font-size: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
