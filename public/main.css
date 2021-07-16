@@ -549,6 +549,7 @@ figure .fa-heart {
 
 .operation-section {
   padding: 4rem 0.7rem 0rem 0.7rem;
+  margin-bottom: 5rem;
 }
 
 .operation-section_title {
@@ -646,6 +647,11 @@ figure .fa-heart {
   position: relative;
 }
 
+.restaurant-section_article:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
 .restaurant-section_article_img {
   height: 15rem;
   width: 100%;
@@ -683,6 +689,69 @@ figure .fa-heart {
 
 .restaurant-section_article_description :nth-child(2) {
   opacity: 0.5;
+}
+
+@media (min-width: 600px) {
+  .localisation {
+    padding: 3rem;
+  }
+  .localisation .fa-map-marker-alt {
+    font-size: 2rem;
+  }
+  .localisation_paragraph {
+    font-size: 2rem;
+  }
+  .operation-section_title {
+    text-align: center;
+    font-size: 3rem;
+    font-style: italic;
+  }
+  .operation_section_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .operation_section_container .operation-section_element {
+    width: 80%;
+    margin: 2rem auto;
+  }
+  .operation_section_container .operation-section_element .fas {
+    position: absolute;
+    left: 30%;
+  }
+  .operation_section_container .operation-section_element_number {
+    position: absolute;
+    border-radius: 50%;
+    left: 15%;
+  }
+  .restaurant-section_title {
+    position: relative;
+    font-size: 3rem;
+    left: 4rem;
+    font-style: italic;
+  }
+  .restaurant-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .restaurant-section_article {
+    width: 45%;
+    margin-bottom: 4vw;
+  }
+  .restaurant-section_article_img {
+    height: 22vw;
+  }
 }
 
 .hero_image {
