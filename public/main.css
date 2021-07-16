@@ -49,6 +49,145 @@ p, h3, h4 {
   font-family: 'Roboto', sans-serif;
 }
 
+.loader-container {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  right: 0;
+  width: 100%;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: fadeOut 2s forwards;
+          animation: fadeOut 2s forwards;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 75px;
+  height: 75px;
+  border: 5px solid transparent;
+  -webkit-animation: spinspin 2s infinite;
+          animation: spinspin 2s infinite;
+}
+
+/* animation disparition loader container */
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* animation spin loader */
+@-webkit-keyframes spinspin {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  30% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  80% {
+    -webkit-transform: rotateY(720deg);
+            transform: rotateY(720deg);
+  }
+  100% {
+    -webkit-transform: rotateY(1080deg);
+            transform: rotateY(1080deg);
+  }
+}
+@keyframes spinspin {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  30% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  80% {
+    -webkit-transform: rotateY(720deg);
+            transform: rotateY(720deg);
+  }
+  100% {
+    -webkit-transform: rotateY(1080deg);
+            transform: rotateY(1080deg);
+  }
+}
+
+/* animation "entrées", "plats", "desserts" */
+@-webkit-keyframes opacity-submenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes opacity-submenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* animation choice in the menu */
+@-webkit-keyframes opacity-submenu-component {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes opacity-submenu-component {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 header {
   width: 100%;
 }
@@ -62,6 +201,20 @@ header .header_logo {
   padding: 2rem 0 1rem 0;
 }
 
+/*Begin Header menus pages */
+.header-container {
+  position: relative;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  font-size: 2.5rem;
+  left: 5%;
+  top: 25%;
+  opacity: 0.8;
+}
+
+/*End Header menus pages */
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,6 +225,16 @@ footer {
           flex-direction: column;
   background-color: #353535;
   padding: 1.5rem 5%;
+}
+
+footer .footer-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 footer h2 {
@@ -95,6 +258,49 @@ footer a {
 
 footer .fas, footer .far {
   margin-right: 1rem;
+}
+
+@media screen and (min-width: 500px) {
+  footer {
+    text-align: center;
+  }
+  .footer-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
+  }
+  footer a {
+    margin: 0.5rem 2rem;
+  }
+}
+
+@media (min-width: 850px) {
+  footer {
+    padding: 4rem 0;
+  }
+  footer .footer-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin: 0 0;
+  }
+  footer h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .reservation_button, .command_button {
@@ -287,109 +493,6 @@ figure .fa-heart {
 }
 
 /******************** End button menu *********************/
-.loader-container {
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  right: 0;
-  width: 100%;
-  background: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-animation: fadeOut 2s forwards;
-          animation: fadeOut 2s forwards;
-}
-
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.9;
-  }
-  90% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.9;
-  }
-  90% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-.loader {
-  display: block;
-  position: relative;
-  width: 75px;
-  height: 75px;
-  border: 5px solid transparent;
-  -webkit-animation: spinspin 2s infinite;
-          animation: spinspin 2s infinite;
-}
-
-@-webkit-keyframes spinspin {
-  0% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
-  30% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-  80% {
-    -webkit-transform: rotateY(720deg);
-            transform: rotateY(720deg);
-  }
-  100% {
-    -webkit-transform: rotateY(1080deg);
-            transform: rotateY(1080deg);
-  }
-}
-
-@keyframes spinspin {
-  0% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-  }
-  30% {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-  80% {
-    -webkit-transform: rotateY(720deg);
-            transform: rotateY(720deg);
-  }
-  100% {
-    -webkit-transform: rotateY(1080deg);
-            transform: rotateY(1080deg);
-  }
-}
-
 .localisation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -582,19 +685,6 @@ figure .fa-heart {
   opacity: 0.5;
 }
 
-/* Page la palette du goût */
-.header-container {
-  position: relative;
-}
-
-.fa-arrow-left {
-  position: absolute;
-  font-size: 2.5rem;
-  left: 5%;
-  top: 25%;
-  opacity: 0.8;
-}
-
 .hero_image {
   height: 50vh;
   width: 100%;
@@ -662,8 +752,8 @@ figure .fa-heart {
 
 .submenu_title-1 {
   opacity: 0;
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
+  -webkit-animation-name: opacity-submenu;
+          animation-name: opacity-submenu;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
   -webkit-animation-delay: 2.6s;
@@ -676,28 +766,10 @@ figure .fa-heart {
           animation-timing-function: ease-in-out;
 }
 
-@-webkit-keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .submenu_title-2 {
   opacity: 0;
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
+  -webkit-animation-name: opacity-submenu;
+          animation-name: opacity-submenu;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
   -webkit-animation-delay: 3.2s;
@@ -710,19 +782,10 @@ figure .fa-heart {
           animation-timing-function: ease-in-out;
 }
 
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .submenu_title-3 {
   opacity: 0;
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
+  -webkit-animation-name: opacity-submenu;
+          animation-name: opacity-submenu;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
   -webkit-animation-delay: 3.8s;
@@ -733,15 +796,6 @@ figure .fa-heart {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .submenu_container {
@@ -779,8 +833,8 @@ figure .fa-heart {
 
 .submenu_component-1 {
   opacity: 0;
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
+  -webkit-animation-name: opacity-submenu-component;
+          animation-name: opacity-submenu-component;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
   -webkit-animation-delay: 2.2s;
@@ -791,15 +845,6 @@ figure .fa-heart {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .submenu_component-1:hover {
@@ -814,8 +859,8 @@ figure .fa-heart {
 
 .submenu_component-2 {
   opacity: 0;
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
+  -webkit-animation-name: opacity-submenu-component;
+          animation-name: opacity-submenu-component;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
   -webkit-animation-delay: 2.4s;
@@ -826,15 +871,6 @@ figure .fa-heart {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .submenu_component-2:hover {
@@ -849,8 +885,8 @@ figure .fa-heart {
 
 .submenu_component-3 {
   opacity: 0;
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
+  -webkit-animation-name: opacity-submenu-component;
+          animation-name: opacity-submenu-component;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
   -webkit-animation-delay: 2.6s;
@@ -861,15 +897,6 @@ figure .fa-heart {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .submenu_component-3:hover {
@@ -884,8 +911,8 @@ figure .fa-heart {
 
 .submenu_component-4 {
   opacity: 0;
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
+  -webkit-animation-name: opacity-submenu-component;
+          animation-name: opacity-submenu-component;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
   -webkit-animation-delay: 2.8s;
@@ -896,15 +923,6 @@ figure .fa-heart {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .submenu_component-4:hover {
@@ -919,8 +937,8 @@ figure .fa-heart {
 
 .submenu_component-5 {
   opacity: 0;
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
+  -webkit-animation-name: opacity-submenu-component;
+          animation-name: opacity-submenu-component;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
   -webkit-animation-delay: 3s;
@@ -931,15 +949,6 @@ figure .fa-heart {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .submenu_component-5:hover {
@@ -954,8 +963,8 @@ figure .fa-heart {
 
 .submenu_component-6 {
   opacity: 0;
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
+  -webkit-animation-name: opacity-submenu-component;
+          animation-name: opacity-submenu-component;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
   -webkit-animation-delay: 3.2s;
@@ -966,15 +975,6 @@ figure .fa-heart {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .submenu_component-6:hover {
@@ -989,8 +989,8 @@ figure .fa-heart {
 
 .submenu_component-7 {
   opacity: 0;
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
+  -webkit-animation-name: opacity-submenu-component;
+          animation-name: opacity-submenu-component;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
   -webkit-animation-delay: 3.4s;
@@ -1001,15 +1001,6 @@ figure .fa-heart {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .submenu_component-7:hover {
@@ -1024,8 +1015,8 @@ figure .fa-heart {
 
 .submenu_component-8 {
   opacity: 0;
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
+  -webkit-animation-name: opacity-submenu-component;
+          animation-name: opacity-submenu-component;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
   -webkit-animation-delay: 3.6s;
@@ -1036,15 +1027,6 @@ figure .fa-heart {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .submenu_component-8:hover {
@@ -1059,8 +1041,8 @@ figure .fa-heart {
 
 .submenu_component-9 {
   opacity: 0;
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
+  -webkit-animation-name: opacity-submenu-component;
+          animation-name: opacity-submenu-component;
   -webkit-animation-duration: 1.8s;
           animation-duration: 1.8s;
   -webkit-animation-delay: 3.8s;
@@ -1071,15 +1053,6 @@ figure .fa-heart {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .submenu_component-9:hover {
