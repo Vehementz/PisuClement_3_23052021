@@ -1,0 +1,179 @@
+.localisation {
+  @include flex-row;
+  justify-content: center;
+  padding: 1rem 0;
+  border-top: rgb(184, 176, 176) solid 2px;
+  background: rgb(233, 227, 227);
+  
+  .fa-map-marker-alt {
+    font-size: 1.2rem;
+  }
+
+  &_paragraph {
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    opacity: 0.7;
+  }
+}
+
+.reservation {
+  @include flex-column;
+  background: map-get($colors ,grey-background);
+  padding: map-get($padding,section);
+
+  &_title {
+    text-align: center;
+    font-size: map-get($font-size, title);
+    font-weight: map-get($font-weight, title);
+    margin: 0 5rem 2rem 5rem;
+    line-height: 2.5rem;
+  }
+
+  &_paragraph {
+    text-align: center;
+    font-size: 1.5rem;
+    opacity: 0.5;
+    margin-bottom: 2rem;
+    
+  }
+
+  
+
+}
+
+
+.operation-section {
+  padding: map-get($padding, section);
+
+  &_title {
+    font-size: map-get($font-size, title);
+    font-weight: map-get($font-weight, title);
+    padding: map-get($padding, title);
+
+  }
+
+  &_element {
+
+    @include flex-row;
+    font-size: map-get($font-size, element);
+    height: 6rem;
+    justify-content: center;
+    align-items: center;
+    background: map-get($colors, grey-background);
+    border-radius: 20px;
+    margin: 1.5rem;
+    font-weight: 600;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125), -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  
+    &:hover {
+      background-color: rgb(245, 235, 237);
+
+      .fas {
+        color: map-get($colors, primary);
+        opacity: 1;
+      }
+    }
+     
+    
+
+    .fas {
+      position: absolute;
+      left: 14%;
+      opacity: 0.6;
+    }
+
+   
+
+    &_number {
+      position: absolute;
+      border-radius: 50%;
+      background: map-get($colors, primary);
+      color: white;
+      left: 3%;
+      font-size: 1.5rem;
+      height: 2.5rem;
+      width: 2.5rem;
+      text-align: center;
+      line-height: 2.5rem;
+      opacity: 1;
+    }
+  }
+}
+
+
+.restaurant-section {
+  @include flex-column;
+  padding: map-get($padding, section);
+  background: map-get($colors, grey-background);
+  
+  
+
+  &_title {
+    font-size: map-get($font-size, title);
+    font-weight: map-get($font-weight, title);
+    padding: map-get($padding, title);
+    margin-bottom: 2rem;
+  }
+
+  &_article {
+   @include flex-column;
+   width: 95%;
+   height: 30%;
+   margin: 0 auto 2rem auto;
+   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125), -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+
+   border-radius: 20px 20px 20px 20px;
+   position: relative;
+   
+   
+   
+
+    &_img {
+      height: 15rem;
+      width: 100%;
+      border-radius: 20px 20px 0 0;
+      margin-bottom: 0;
+      object-fit: cover;
+    }
+
+    &_new {
+      position: absolute;
+      font-size: 1.2rem;
+      top: 1.5rem;
+      right: 1.5rem;
+      background-color: map-get($colors, third);
+      color: darken(map-get($colors, third), 45%);
+      padding: 0.5rem;
+
+    }
+
+    &_description {
+      background: white;
+      border-radius: 0 0 20px 20px;
+      padding: 1rem;
+      position: relative;
+      
+
+      > p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+
+      :first-child {
+        font-weight: bold;
+      }
+
+      :nth-child(2) {
+        opacity: 0.5;
+      }
+
+    
+    }
+  
+
+  
+  }
+
+}
+

@@ -1,0 +1,206 @@
+
+
+
+.hero_image {
+  height: 50vh;
+  width: 100%;
+
+}
+
+.menu {
+  position: absolute;
+  top: -4rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 35px 35px 0 0;
+  position: relative;
+  bottom: 0rem;
+  padding: map-get($padding, section);
+  background: white;
+  width: 100%;
+
+  &_container-title {
+
+    @include flex-row;
+    font-size: 1.2rem;
+    position: relative;
+    margin-left: 2.5%;
+    
+}
+    
+}
+
+  .submenu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    
+    &_title {
+      font-size: map-get($font-size, menu-title);
+      font-weight: map-get($font-weight, menu-title);
+      position: relative;
+      text-transform: uppercase;
+      margin: 2rem 0 1rem 2.5%;
+
+      
+
+      &:before {
+        content: "";
+        width: 3rem;
+        height: .3rem;
+        background-color: #99e2d0;
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
+      }
+
+      @for $i from 1 through 3 {
+        &-#{$i} {
+          opacity: 0;
+          animation-name: opacity-submenu;
+          animation-duration: 0.2s * 3;
+          animation-delay: 2s + (0.6s * $i);
+          transform-origin: center;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-in-out;
+          
+          
+      }
+    }
+  }
+
+    &_container {
+      display: flex;
+      flex-direction: column;
+      
+
+    }
+   
+  }
+  
+  
+  .submenu_component {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    border-radius: .75rem;
+    box-shadow: rgb(235, 230, 230) 0.25rem 0.25rem 1rem, 
+                rgb(235, 230, 230) -0.25rem -0.25rem 1rem;
+    cursor: pointer;
+    width: auto;
+    margin: 1.5vh auto;
+    width: 95%;
+    background-color: #fff;
+    align-items: center;
+    padding-left: 1rem;
+   
+    
+
+    @for $i from 1 through 9 {
+      &-#{$i} {
+        opacity: 0;
+        animation-name: opacity-submenu-component;
+        animation-duration: 0.2s * 9;
+        animation-delay: 2s + (0.2s * $i);
+        transform-origin: center;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        
+      
+
+      &:hover {
+        background-color: darken($color: #fff, $amount: 5%);
+        transform: scale(1.02);
+        transition: transform 0.3s ease-in-out;
+        
+      }
+
+      }
+  
+    }
+
+    &_header {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      order: 1;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      line-height: 1.8rem;
+      
+    }
+
+    &_title {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: map-get($font-size, submenu-title);
+      font-weight: map-get($font-weight, submenu-title);
+  
+    }
+
+    &_text {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: map-get($font-size, text-component);
+      overflow: hidden;
+      opacity: 0.8;
+      
+    }
+   
+   
+    &_text-and-price {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      
+      overflow: hidden;
+      
+      span {
+        font-weight: bold;
+       
+      }
+
+    }
+
+    &:active .submenu_component_wrap {
+      width: 15rem;
+      transform-origin: left;
+      transition: width 0.4s ease-in-out 0.2s;
+    }
+
+    &:active .submenu_component_icon {
+      transform: rotate(360deg);
+     
+    }
+
+    &_wrap {
+      display: flex;
+      flex-direction: column;
+      order: 2;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0 .75rem .75rem 0;
+      cursor: pointer;
+      width: 0;
+      height: 100%;
+      background-color: #99e2d0;
+      overflow : hidden;
+      margin-left: 2rem;
+      padding: auto;
+      padding: 2rem 0;
+
+    }
+    
+    &_icon {
+      font-size: 2rem;
+      color: white;
+      transition: transform 0.4s 0.2s ease-in-out;
+      
+
+    }
+   
+  }
+
