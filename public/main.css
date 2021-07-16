@@ -747,10 +747,31 @@ figure .fa-heart {
   }
   .restaurant-section_article {
     width: 45%;
-    margin-bottom: 4vw;
+    margin-bottom: 5%;
   }
   .restaurant-section_article_img {
     height: 22vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  .operation_section_container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .operation_section_container .operation-section_element {
+    width: 30%;
+  }
+  .operation_section_container .operation-section_element_number {
+    display: block;
+    position: relative;
+    left: -18%;
+  }
+  .operation_section_container .operation-section_element .fas {
+    position: relative;
+    left: -4rem;
   }
 }
 

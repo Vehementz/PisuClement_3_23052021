@@ -243,8 +243,7 @@
 
   .restaurant-section_article {
     width: 45%;
-    margin-bottom: 4vw;
-    
+    margin-bottom: 5%;
   }
 
   .restaurant-section_article_img {
@@ -253,4 +252,30 @@
 
 
 
+}
+
+
+
+@media (min-width: 1000px) {
+
+  .operation_section_container {
+    flex-direction: row;
+
+    .operation-section_element {
+      width: 30%;
+      
+      &_number {
+        display: block;
+        position: relative;
+        left: -18%;
+      }
+
+      .fas {
+        position: relative;
+        left: -4rem;
+      }
+    }
+  }
+
+  
 }
