@@ -2,7 +2,7 @@
 
 
 .hero_image {
-  height: 50vh;
+  height: 70vw;
   width: 100%;
 
 }
@@ -205,5 +205,76 @@
   }
 
 
+@media (min-width: 500px) {
 
+  .hero_image {
+    height: 60vw;
+} 
+}
+
+
+@media (min-width: 700px) {
+
+  .hero_image {
+    height: 50vw;
+    max-height: 50rem;
+} 
+
+  .menu {
+    margin: 0 auto;
+    
+  .menu_container-title{
+    justify-content: center;
   
+}  
+    
+
+    &_container-title {
+      margin-bottom: 5rem;
+    }
+  }
+
+ 
+  .submenu {
+    margin: 0 0;
+    width: 100%;
+    justify-content: center;
+
+    
+
+    .submenu_component {
+      width: 70%;
+      margin: 2rem auto;
+    }
+    
+
+    &_title {
+
+      text-align: center;
+      margin: 3rem auto;
+    
+      &::before {
+        position: absolute;
+        left: 0;
+        width: 7rem;
+      }
+    }
+  }
+}
+
+
+
+@media (min-width: 1000px) {
+  
+ .menu  .submenu_container {
+    flex-direction: row;
+  }
+  
+  .submenu {
+    width: 33%;
+    margin: 0 0;
+    
+
+  }
+
+}

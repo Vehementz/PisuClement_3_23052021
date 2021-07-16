@@ -10,3 +10,15 @@ header {
 }
 }
 
+
+@media (min-width: 700px) {
+
+  header {
+
+  .header_logo {
+    width: 35%;
+    max-width: 35rem;
+  }
+
+}
+}

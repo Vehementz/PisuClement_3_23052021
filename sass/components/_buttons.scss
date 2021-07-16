@@ -33,7 +33,7 @@
 }
 
 
-/*  Begin restaurants presentation button  */
+/*  Begin home presentation button  */
   
 
 figure .fa-heart {
@@ -93,15 +93,7 @@ figure .fa-heart {
 }
 
 .button-heart-2 {
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  right: 1rem;
-  bottom: 0;
-  color: none;
-  background: none;
-  border: none;
-  
+  @extend .button-heart-1;
 
   .fas {
     @extend .heart-hover;
@@ -121,10 +113,10 @@ figure .fa-heart {
   display: flex;
   justify-content: flex-end;
   right: 5%;
-  top: 5rem;
   color: none; 
   background: none;
   border: none;
+  top: 0.5rem;
 
   .far {
     z-index: 2;
@@ -159,14 +151,7 @@ figure .fa-heart {
 }
 
 .menu_button-heart-2 {
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  right: 5%;
-  top: 5rem;
-  color: none;
-  background: none;
-  border: none;
+  @extend .menu_button-heart-1;
   
 
   .fas {
@@ -175,6 +160,15 @@ figure .fa-heart {
     
   }
 }
+
+@media (min-width: 700px) {
+  .menu_button-heart-1,
+  .menu_button-heart-2 {
+    left: 80%;
+  }
+
+}
+
 
 
 /******************** End button menu *********************/
