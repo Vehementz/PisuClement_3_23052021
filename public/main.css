@@ -49,7 +49,71 @@ p, h3, h4 {
   font-family: 'Roboto', sans-serif;
 }
 
+.loader-container {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  right: 0;
+  width: 100%;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: fadeOut 2s forwards;
+          animation: fadeOut 2s forwards;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 75px;
+  height: 75px;
+  border: 5px solid transparent;
+  -webkit-animation: spinspin 2s infinite;
+          animation: spinspin 2s infinite;
+}
+
 /* animation disparition loader container */
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 /* animation spin loader */
 @-webkit-keyframes spinspin {
   0% {
