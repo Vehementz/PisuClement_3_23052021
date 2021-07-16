@@ -1205,7 +1205,7 @@ figure .fa-heart {
   }
   .submenu .submenu_component {
     width: 70%;
-    margin: 2rem auto;
+    margin: 1rem auto;
   }
   .submenu_title {
     text-align: center;
@@ -1219,15 +1219,19 @@ figure .fa-heart {
 }
 
 @media (min-width: 1000px) {
-  .menu .submenu_container {
+  .submenu_container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .submenu {
-    width: 33%;
-    margin: 0 0;
+  .submenu_container .submenu_component {
+    width: 90%;
+  }
+  .submenu_component_header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=main.css.map */
