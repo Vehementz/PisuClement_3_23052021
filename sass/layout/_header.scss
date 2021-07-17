@@ -12,8 +12,14 @@
   position: absolute;
   font-size: 2.5rem;
   left: 5%;
-  top: 25%;
+  top: 30%;
   opacity: 0.8;
 }
 
+
+@media (min-width: 500px) {
+  .fa-arrow-left {
+    top: 45%;
+  }
+}
 /*End Header menus pages */
