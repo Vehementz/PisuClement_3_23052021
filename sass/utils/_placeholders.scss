@@ -16,7 +16,7 @@
 }
 
 .heart-hover {
-//  -webkit-background-clip: text;
+ -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;
  -webkit-text-stroke: none;
  background-image: map-get($colors, background-btn);

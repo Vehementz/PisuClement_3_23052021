@@ -20,6 +20,7 @@
 }
 
 .heart-hover, .button-heart-2 .fas, .menu_button-heart-2 .fas {
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: none;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e85ab4), to(#bd24f0));
