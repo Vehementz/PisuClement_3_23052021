@@ -130,6 +130,11 @@
    position: relative;
    
    
+    &:last-child {
+      margin-bottom: 5rem;
+    }
+
+
    &:hover {
      transform: scale(1.03);
    }
@@ -167,6 +172,7 @@
 
       :first-child {
         font-weight: bold;
+        font-size: 1.5rem;
       }
 
       :nth-child(2) {
@@ -244,6 +250,10 @@
   .restaurant-section_article {
     width: 45%;
     margin-bottom: 5%;
+
+    &:last-child {
+      margin-bottom: 5%;
+    }
   }
 
   .restaurant-section_article_img {
