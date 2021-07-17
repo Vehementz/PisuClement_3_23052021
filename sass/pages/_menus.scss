@@ -4,6 +4,7 @@
 .hero_image {
   height: 70vw;
   width: 100%;
+  object-fit: cover;
 
 }
 
@@ -54,6 +55,8 @@
         left: 0;
         bottom: -0.5rem;
       }
+
+     
 
       @for $i from 1 through 3 {
         &-#{$i} {

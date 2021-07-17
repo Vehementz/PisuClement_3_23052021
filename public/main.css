@@ -766,6 +766,8 @@ figure .fa-heart {
 .hero_image {
   height: 70vw;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .menu {
