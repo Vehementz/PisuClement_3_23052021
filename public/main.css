@@ -1220,10 +1220,8 @@ figure .fa-heart {
 
 .submenu_component:active .submenu_component_wrap {
   width: 15rem;
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transition: width 0.4s ease-in-out 0.2s;
-  transition: width 0.4s ease-in-out 0.2s;
+  -webkit-transition: width 0.4s 0.2s ease-in-out;
+  transition: width 0.4s 0.2s ease-in-out;
 }
 
 .submenu_component:active .submenu_component_icon {
@@ -1256,6 +1254,8 @@ figure .fa-heart {
   overflow: hidden;
   margin-left: 2rem;
   padding: 2rem 0;
+  -webkit-transition: width 0.4s 0.2s ease-in-out;
+  transition: width 0.4s 0.2s ease-in-out;
 }
 
 .submenu_component_icon {
