@@ -655,6 +655,7 @@ figure .fa-heart {
 .restaurant-section_article:hover {
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
+          transition: all 0.3s ease;
 }
 
 .restaurant-section_article_img {

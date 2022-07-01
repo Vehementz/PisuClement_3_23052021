@@ -130,6 +130,7 @@
    position: relative;
    
    
+   
     &:last-child {
       margin-bottom: 5rem;
     }
@@ -137,6 +138,7 @@
 
    &:hover {
      transform: scale(1.03);
+     
    }
 
     &_img {
